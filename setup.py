@@ -33,7 +33,7 @@ for student_data in students_data:
     except Exception as e:
         print(f"Error inserting data into 'InternationalStudents' table: {e}")
 
-# Insert sample data into 'Scholarships' table
+# Insert  data into 'Scholarships' table
 scholarships_data = [('Merit Scholarship', 1),
                      ('Diversity Scholarship', 2),
                      ('STEM Excellence Scholarship', 3)]

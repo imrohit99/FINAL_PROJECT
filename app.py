@@ -1,7 +1,7 @@
 from bottle import route, post, run, template, redirect, request
 import database
 
-# Call set_up_database to create tables and insert sample data
+# Create data and input sample data
 database.set_up_database()
 
 @route("/")
@@ -10,7 +10,7 @@ def get_index():
 
 @route("/list")
 def get_list():
-    # Fetch data from both tables
+    # import data from both tables
     students_and_scholarships = database.get_students_and_scholarships()
     return template("list", data=students_and_scholarships)
 
@@ -21,12 +21,10 @@ def get_add_student():
 @post("/add_student")
 def post_add_student():
     # Add international student
-    # Modify the function call based on your actual implementation
     database.add_international_student(
         request.forms.get("first_name"),
         request.forms.get("last_name"),
         request.forms.get("gender"),
-        # Add other fields as needed
     )
     redirect("/list")
 
@@ -37,11 +35,9 @@ def get_add_scholarship():
 @post("/add_scholarship")
 def post_add_scholarship():
     # Add scholarship
-    # Modify the function call based on your actual implementation
     database.add_scholarship(
         request.forms.get("scholarship_name"),
         request.forms.get("description"),
-        # Add other fields as needed
     )
     redirect("/list")
 
@@ -58,13 +54,12 @@ def post_delete(student_id):
 
 @route("/add")
 def get_add():
-    # You might need to create a corresponding template for adding students and scholarships
+    # template to add student details additional
     return template("add")
 
 @post("/add_student")
 def post_add_student():
     # Add international student
-    # Modify the function call based on your actual implementation
     database.add_student_and_scholarship(
         request.forms.get("first_name"),
         request.forms.get("last_name"),
@@ -89,13 +84,11 @@ def get_update(student_id):
     # Fetch the data of the student and scholarship with the given ID
     student_info = database.get_students_and_scholarships(student_id)
     
-    # Render the update template with the fetched data
     return template("update", student=student_info[0])
 
 @route("/update/<student_id>", method="POST")
 def post_update(student_id):
-    # Extract the updated data from the form
-    # Update the function call based on your actual implementation
+    # import data after the merge of tables
     database.update_student_and_scholarship(
         student_id,
         request.forms.get("first_name"),

@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>International Students and Scholarships</title>
+    <style>
+         body {
+            text-align: center;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        table {
+            margin: 0 auto; /* Center the table */
+        }
+
+        .header-links {
+            text-align: right;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right:150px;
+            font-size:30px;
+        }
+
+        a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
+    <div class="header-links">
+        <a href="/search">Search</a>
+    </div>
     <h2>International Students and Scholarships</h2>
     <table border="1">
         <tr>
@@ -48,8 +77,7 @@
                 <td><a href="/delete/{{item['StudentID']}}">Delete</a></td>
             </tr>
         % end
-    </table>
-    <a href="/add_student">Add a new student and scholarship</a>
-     <a href="/search">Search </a>
+    </table><br><br>
+    <a style="font-size:30px;" href="/add_student">Add a new student and scholarship</a>
 </body>
 </html>

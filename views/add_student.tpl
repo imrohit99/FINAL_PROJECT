@@ -1,4 +1,31 @@
 <html>
+<head>
+  <style>
+        body {
+            text-align: center;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        input, button {
+            width: 100%; /* Make input fields and button full width */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+  </style> 
+</head>
 <body>
 <h2>Add New International Student and Scholarship</h2>
 <hr/>

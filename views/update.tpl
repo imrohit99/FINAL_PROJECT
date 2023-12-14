@@ -4,6 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Student and Scholarship</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        input, button {
+            width: 100%; /* Make input fields and button full width */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style> 
 </head>
 <body>
     <h2>Update Student and Scholarship</h2>

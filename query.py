@@ -18,7 +18,7 @@ print(student_rows)
 print("\nScholarships:")
 print(scholarship_rows)
 
-# Combine the data into a single list of dictionaries
+# Combine the data into a single table
 student_data = [
     {
         'StudentID': row[0],

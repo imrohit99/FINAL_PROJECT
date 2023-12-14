@@ -27,7 +27,7 @@ def add_student_and_scholarship(first_name, last_name, gender, date_of_birth, na
     cursor.execute("INSERT INTO scholarships (ScholarshipName) VALUES (?)", (scholarship_name,))
     connection.commit()
 
-    # Get the last inserted ScholarshipID
+    # latest ScholarshipID
     cursor.execute("SELECT last_insert_rowid()")
     scholarship_id = cursor.fetchone()[0]
 
@@ -70,7 +70,7 @@ def delete_student_and_scholarship(student_id):
     # Delete student
     cursor.execute("DELETE FROM students WHERE StudentID=?", (student_id,))
 
-    # Note: Deleting the student automatically removes the associated scholarship due to the foreign key constraint
+    #  Deleting the student automatically removes the associated scholarship due to the foreign key constraint
     connection.commit()
 
 
